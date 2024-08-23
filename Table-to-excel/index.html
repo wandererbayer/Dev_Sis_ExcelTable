@@ -7,13 +7,78 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tabela para Excel</title>
 
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+
+
     </head>
 
     <body>
 
-        <h1>Fulano</h1>
-        <h5>Ciclano<h5>
+        <h1>Tabela para Excel</h1>
+
+        <section class="">
+
+            <div class="wrap-input">
+                <label for="nome">Descrição</label>
+                <input id="nome" type="text" placeholder="Digite o nome do produto">
+            </div>
+
+            <div class="wrap-input">
+                <label for="valor">Valor do Produto</label>
+                <input id="valor" type="number" placeholder="Digite o valor do produto">
+            </div>
+
+            <div class="wrap-input">
+                <label for="quantidade">Quantidade Unitária</label>
+                <input id="quantidade" type="number" placeholder="Digite a quantidade unitária">
+            </div>
+
+        </section>
+
+        <div class="wrap-btn">
+
+            <button class="btn" onclick="adicionarItem()">Inserir na tabela</button>
+
+        </div>
+
+        <div class="wrap-table">
+
+            <table id="tabela">
+
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Quantidade</th>
+                    </tr>
+                </thead>
+
+                <tbody></tbody>
+
+            </table>
+
+        </div>
+
+        <div class="wrap-table">
+
+            <button class="btn" onclick="exportarExcel()">Gerar Excel</button>
+
+        </div>
+
+        </div>
+
+
+
+        <table></table>
 
     </body>
+
+    <script src="script.js"></script>
 
 </html>
